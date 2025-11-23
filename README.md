@@ -1,5 +1,7 @@
 # DodoPayments Assignment
 
+## [Frontend API Queue System Page Link](https://dodo-payment-assignment.vercel.app/queue-test)
+
 A comprehensive financial dashboard application built with Next.js and TailwindCSS, featuring a UI implementation based on a Figma design and an API queue system to handle rate-limited requests.
 
 ## Features
