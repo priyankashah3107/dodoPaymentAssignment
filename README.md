@@ -199,11 +199,12 @@ pnpm build
 pnpm start
 ```
 
+<!--
 ### Recommended Platforms
 
 - **Vercel**: Optimized for Next.js deployments
 - **Netlify**: Great for static and serverless deployments
-- **AWS/Azure/GCP**: For custom infrastructure needs
+- **AWS/Azure/GCP**: For custom infrastructure needs -->
 <!--
 
 ## 📄 License
