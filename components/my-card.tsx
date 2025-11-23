@@ -1,130 +1,3 @@
-// "use client";
-// import React, { useState } from "react";
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from "./ui/card";
-// import Image from "next/image";
-// import { Button } from "./ui/button";
-// import { CheckCircle, ChevronLeft, ChevronRight, Plus } from "lucide-react";
-// import { Badge } from "./ui/badge";
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-// import { SpendingCircle } from "./SpendingCircle";
-// const backendValuePercentage = 60;
-
-// const MyCards = () => {
-//   const [tab, setTab] = useState<"daily" | "weekly" | "monthlt">("weekly");
-//   return (
-//     <>
-//       <Card className="flex flex-col ">
-//         <div className="flex flex-row items-center gap-4">
-//           <Image
-//             src={"/mycards/bank.png"}
-//             alt="bank"
-//             width={24}
-//             height={24}
-//             className="object-contain"
-//           />
-//           <p>My Cards</p>
-//           <Button className="bg-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-black  border text-black cursor-pointer ">
-//             {" "}
-//             <span>
-//               {" "}
-//               <Plus />{" "}
-//             </span>
-//             Add Card
-//           </Button>
-//         </div>
-//         <Card>
-//           <div className="flex flex-row justify-between">
-//             <div className="flex flex-row gap-3">
-//               <Image
-//                 src={"/avatar/logo.png"}
-//                 alt="logo"
-//                 width={32}
-//                 height={32}
-//                 className="object-contain"
-//               />
-//               <Image
-//                 src={"/mycards/wifi.png"}
-//                 alt="wifi"
-//                 width={20}
-//                 height={16}
-//                 className="object-contain"
-//               />
-//               <Badge>
-//                 <span>
-//                   {" "}
-//                   <CheckCircle className="w-2 h-2" />{" "}
-//                 </span>
-//                 Active
-//               </Badge>
-//             </div>
-//             <Image
-//               src={"/mycards/mastercard.png"}
-//               alt="mastercard"
-//               width={100}
-//               height={100}
-//             />
-//           </div>
-//           <div>
-//             <p>Saving Card</p>
-//             <div className="flex flex-row justify-between">
-//               <h2>$16,058.94</h2>
-//               <div>
-//                 <button className="bg-white border rounded-sm">
-//                   {" "}
-//                   <ChevronLeft />{" "}
-//                 </button>
-//                 <button className="bg-white border rounded-sm">
-//                   {" "}
-//                   <ChevronRight />{" "}
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//         </Card>
-//         <div className="flex w-full max-w-sm flex-col gap-6">
-//           <Tabs defaultValue="account">
-//             <TabsList className="w-full">
-//               <TabsTrigger value="daily">Daily</TabsTrigger>
-//               <TabsTrigger value="weekly">Weekly</TabsTrigger>
-//               <TabsTrigger value="monthly">Monthly</TabsTrigger>
-//             </TabsList>
-//             <TabsContent value="daily">
-//               <div className="flex flex-row items-center gap-2">
-//                 <SpendingCircle value={backendValuePercentage} />
-//                 <div>
-//                   <p>Spending Limit</p>
-//                   <h1>
-//                     $1,500.00 <span> / week</span>
-//                   </h1>
-//                 </div>
-//                 <button className="bg-white border rounded-sm">
-//                   {" "}
-//                   <ChevronRight />{" "}
-//                 </button>
-//               </div>
-//             </TabsContent>
-//             <TabsContent value="weekly">
-//               <h2>weekly</h2>
-//             </TabsContent>
-//             <TabsContent value="monthly">
-//               <h2>monthly</h2>
-//             </TabsContent>
-//           </Tabs>
-//         </div>
-//       </Card>
-//     </>
-//   );
-// };
-
-// export default MyCards;
-
 "use client";
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
@@ -135,7 +8,6 @@ import { Badge } from "./ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { SpendingCircle } from "./SpendingCircle";
 
-// 🔵 Backend values (arrives from API normally)
 const spendingData = [
   {
     key: "daily",
@@ -162,7 +34,7 @@ const spendingData = [
 
 const MyCards = () => {
   return (
-    <Card className="flex flex-col gap-6 p-6 ">
+    <div className="flex flex-col gap-6 px-4 py-6 border rounded-xl shadow w-full  ">
       {/* HEADER */}
       <div className="flex flex-row items-center gap-4 justify-between">
         <div className="flex items-center gap-3">
@@ -176,7 +48,7 @@ const MyCards = () => {
       </div>
 
       {/* CARD */}
-      <Card className="p-6 rounded-xl">
+      <div className="px-2 py-4 border  rounded-xl">
         <div className="flex justify-between items-start">
           <div className="flex items-center gap-3">
             <Image src="/avatar/logo.png" alt="logo" width={32} height={32} />
@@ -191,8 +63,9 @@ const MyCards = () => {
           <Image
             src="/mycards/mastercard.png"
             alt="mastercard"
-            width={70}
+            width={80}
             height={70}
+            className="object-contain -mt-4 "
           />
         </div>
 
@@ -212,7 +85,7 @@ const MyCards = () => {
             </div>
           </div>
         </div>
-      </Card>
+      </div>
 
       {/* SPENDING TABS */}
       <Tabs defaultValue="weekly" className="w-full">
@@ -245,7 +118,7 @@ const MyCards = () => {
           </TabsContent>
         ))}
       </Tabs>
-    </Card>
+    </div>
   );
 };
 

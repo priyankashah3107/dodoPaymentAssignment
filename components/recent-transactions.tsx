@@ -34,7 +34,7 @@ const transactions = [
   },
   {
     tab: "Incoming",
-    icon: "/recent/amazonl.png",
+    icon: "/subs/amazon.png",
     title: "Refund from Amazon",
     description: "Refund of Order No #124235",
     amount: "$36.24",
@@ -68,7 +68,7 @@ const transactions = [
   },
   {
     tab: "Outgoing",
-    icon: "/recent/amazonl.png",
+    icon: "/subs/amazon.png",
     title: "Refund from Amazon",
     description: "Refund of Order No #124235",
     amount: "$36.24",
@@ -90,7 +90,7 @@ const tabs = ["Incoming", "Outgoing", "Pending"];
 
 const RecentTransactions = () => {
   return (
-    <Card className="w-full p-4 rounded-2xl shadow-sm">
+    <div className="w-full p-4 rounded-xl shadow border h-fit  ">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-row gap-2 items-center">
@@ -182,7 +182,7 @@ const RecentTransactions = () => {
           </TabsContent>
         ))}
       </Tabs>
-    </Card>
+    </div>
   );
 };
 

@@ -34,7 +34,7 @@ const mysubscription = [
 
 const Mysubscription = () => {
   return (
-    <Card className="w-full p-4 rounded-2xl shadow-sm">
+    <div className="w-full p-4 rounded-2xl shadow-sm h-fit">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-row gap-2 items-center">
@@ -117,7 +117,7 @@ const Mysubscription = () => {
           </div>
         ))}
       </div>
-    </Card>
+    </div>
   );
 };
 

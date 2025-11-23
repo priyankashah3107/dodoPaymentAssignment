@@ -32,7 +32,7 @@ const spendingsummary = [
 
 export default function SpendingSummary() {
   return (
-    <Card className="w-full p-4 rounded-2xl shadow-sm">
+    <div className="w-full p-4  border shadow rounded-xl ">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-row gap-2 items-center">
@@ -120,6 +120,6 @@ export default function SpendingSummary() {
         </span>
         <span className="text-gray-500 text-xs font-medium">$2000.</span>
       </div>
-    </Card>
+    </div>
   );
 }

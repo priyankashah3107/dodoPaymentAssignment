@@ -13,65 +13,8 @@ const CreditScore = () => {
   const filledBars = Math.round((score / maxScore) * 40); // 40 bars total
 
   return (
-    // <Card className="w-full px-4 rounded-2xl shadow-sm bg-white">
-    //   {/* Header */}
-    //   <div className="flex justify-between items-center mb-4">
-    //     <div className="flex items-center gap-2">
-    //       <Image
-    //         src={timer}
-    //         alt="refresh"
-    //         width={22}
-    //         height={22}
-    //         className="opacity-70"
-    //       />
-    //       <h2 className="text-neutral-900 text-base font-medium">
-    //         Credit Score
-    //       </h2>
-    //     </div>
-
-    //     <Button
-    //       variant="outline"
-    //       className="rounded-xl border px-4 py-1.5 text-sm font-medium"
-    //     >
-    //       Details
-    //     </Button>
-    //   </div>
-
-    //   <Separator className="my-5" />
-
-    // {/* Score Section */}
-    // <div className="flex items-start justify-between">
-    //   <div className="flex flex-col gap-2">
-    //     <div className="text-lg leading-6 text-neutral-600">
-    //       Your{" "}
-    //       <span className="font-medium text-neutral-900">credit score</span>{" "}
-    //       is <span className="font-medium text-neutral-900">{score}</span>
-    //     </div>
-
-    //     <p className="text-text-sub-600 text-xs leading-4 text-neutral-500">
-    //       This score is considered to be Excellent.
-    //     </p>
-    //   </div>
-
-    //   <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center">
-    //     <span className="text-3xl">😎</span>
-    //   </div>
-    // </div>
-
-    // {/* Progress Bars */}
-    // <div className="mt-6 flex gap-1.5">
-    //   {Array.from({ length: 40 }).map((_, i) => (
-    //     <div
-    //       key={i}
-    //       className={`h-10 w-1.5 rounded-md ${
-    //         i < filledBars ? "bg-[#21C36B]" : "bg-[#D9D9D9]"
-    //       }`}
-    //     />
-    //   ))}
-    // </div>
-    // </Card>
     <>
-      <div className="bg-white border rounded-xl px-4 py-4 shadow">
+      <div className=" border rounded-xl px-4 py-4 shadow bg-white">
         <div className="flex flex-row justify-between items-center">
           <div className="flex flex-row gap-2">
             <Image src={timer} alt="timere" width={20} height={20} />

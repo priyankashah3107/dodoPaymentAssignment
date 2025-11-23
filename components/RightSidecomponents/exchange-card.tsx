@@ -68,7 +68,7 @@ export default function ExchangeCard() {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white border rounded-2xl shadow-sm p-4">
+    <div className="w-full bg-white border rounded-2xl shadow-sm p-4">
       {/* Header */}
       <div className="flex justify-between items-center mb-3">
         <div className="flex items-center gap-2">

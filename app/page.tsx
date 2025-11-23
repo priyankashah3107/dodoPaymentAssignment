@@ -20,7 +20,7 @@ const page = () => {
             <RecentTransactions />
             <Mysubscription />
           </div>
-          <div className="flex-1 flex-col ">
+          <div className="grid grid-cols-1 gap-10">
             <TotalExpenses />
             <ExchangeCard />
             <CreditScore />
