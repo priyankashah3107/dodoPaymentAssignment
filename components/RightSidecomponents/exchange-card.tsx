@@ -68,26 +68,26 @@ export default function ExchangeCard() {
   };
 
   return (
-    <div className="w-full bg-white border rounded-2xl shadow-sm p-4">
+    <div className="w-full bg-white border rounded-2xl shadow-sm p-4 h-fit ">
       {/* Header */}
       <div className="flex justify-between items-center mb-3">
         <div className="flex items-center gap-2">
           <RefreshCw className="text-gray-600" />
-          <h3 className="text-lg font-semibold text-[#0E121B]">Exchange</h3>
+          <h3 className="text-lg font-normal text-[#0E121B]">Exchange</h3>
         </div>
 
-        <button className="px-4 py-1 border rounded-full text-sm text-[#0E121B]">
+        <button className="px-4 py-1 border rounded-md text-sm text-[#0E121B]">
           Currencies
         </button>
       </div>
 
       {/* Card */}
-      <div className="bg-[#F8FAFC] border rounded-xl overflow-hidden">
+      <div className=" border rounded-xl overflow-hidden">
         {/* Currency selectors */}
-        <div className="flex items-center justify-between px-4 py-3">
+        <div className="flex items-center justify-between px-4 py-1  border ">
           {/* FROM */}
           <Select value={base} onValueChange={setBase}>
-            <SelectTrigger className="h-9 w-28 rounded-full border bg-white">
+            <SelectTrigger className="h-9 w-22   border-none ">
               <SelectValue placeholder="USD" />
             </SelectTrigger>
             <SelectContent>
@@ -100,16 +100,13 @@ export default function ExchangeCard() {
           </Select>
 
           {/* SWAP */}
-          <button
-            onClick={swap}
-            className="p-2 rounded-full border bg-white hover:bg-gray-100"
-          >
+          <button onClick={swap} className=" text-gray-500">
             <ArrowLeftRight />
           </button>
 
           {/* TO */}
           <Select value={target} onValueChange={setTarget}>
-            <SelectTrigger className="h-9 w-28 rounded-full border bg-white">
+            <SelectTrigger className="h-9 w-22 border-none">
               <SelectValue placeholder="EUR" />
             </SelectTrigger>
             <SelectContent>
@@ -123,17 +120,18 @@ export default function ExchangeCard() {
         </div>
 
         {/* Amount */}
-        <div className="py-6 px-6 text-center">
-          <div className="text-5xl font-bold text-[#0E121B]">
+        <div className="py-3 px-6 text-center">
+          <div className="text-4xl font-medium text-[#0E121B]">
             ${amount.toFixed(2)}
           </div>
           <div className="text-sm text-gray-500 mt-2">
-            Available : <span className="font-medium">$16,058.94</span>
+            Available :{" "}
+            <span className="font-medium text-gray-900 ">$16,058.94</span>
           </div>
         </div>
 
         {/* Rate */}
-        <div className="border-t bg-white px-4 py-3 text-center text-sm text-gray-600">
+        <div className="border-t bg-[#F5F7FA] px-4 py-1.5 text-center text-sm text-gray-600">
           1 {base} ={" "}
           <span className="font-semibold">
             {loading ? "Loading..." : rate.toFixed(2)} {target}
@@ -142,7 +140,7 @@ export default function ExchangeCard() {
       </div>
 
       {/* Fees */}
-      <div className="mt-4 space-y-3">
+      <div className="mt-4 space-y-2">
         <div className="flex justify-between text-gray-600">
           <span>Tax (2%)</span>
           <span>${tax.toFixed(2)}</span>
@@ -153,7 +151,7 @@ export default function ExchangeCard() {
           <span>${fee.toFixed(2)}</span>
         </div>
 
-        <div className="flex justify-between font-semibold text-[#0E121B]">
+        <div className="flex justify-between font-normal ">
           <span>Total amount</span>
           <span>
             {target} {convertedNet.toFixed(2)}
@@ -166,7 +164,7 @@ export default function ExchangeCard() {
         <Button
           onClick={handleExchange}
           disabled={isExchanging || loading}
-          className="w-full rounded-xl py-4 flex items-center justify-center gap-2"
+          className="w-full rounded-md py-4 flex items-center justify-center border gap-2 bg-white/0 text-gray-600 hover:bg-white/0 hover:text-gray-600"
         >
           <RefreshCw className={isExchanging ? "animate-spin" : ""} />
           {isExchanging ? "Processing…" : "Exchange"}

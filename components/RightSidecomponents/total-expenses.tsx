@@ -18,9 +18,9 @@ const data = [
 
 const TotalExpenses = () => {
   return (
-    <Card className="w-full p-6 rounded-3xl shadow-sm">
+    <div className="w-full p-6 rounded-xl shadow border h-fit">
       {/* Top Section */}
-      <div className="flex justify-between w-full mb-6">
+      <div className="flex justify-between w-full">
         {/* Icon */}
         <div className="w-10 h-10 rounded-full border border-[#D0D5DD] flex items-center justify-center">
           <ArrowDownLeft size={24} className="text-[#4B5563]" />
@@ -44,7 +44,7 @@ const TotalExpenses = () => {
 
       {/* Bottom Details */}
       <div className="flex flex-col justify-start">
-        <p className="text-text-sub-600 text-sm font-normal leading-5">
+        <p className="text-[#525866] text-sm font-normal leading-5">
           Total Expenses
         </p>
 
@@ -60,7 +60,7 @@ const TotalExpenses = () => {
           </Badge>
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 

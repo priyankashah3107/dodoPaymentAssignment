@@ -33,6 +33,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import { Separator } from "./ui/separator";
 
 // This is sample data.
 const data = {
@@ -108,15 +109,17 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader>
+    <Sidebar collapsible="icon" {...props} className="">
+      <SidebarHeader className=" text-neutral-900 text-sm  font-medium  leading-5">
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
-      <SidebarContent>
+      <Separator className="mt-2" />
+      <SidebarContent className="  text-neutral-900 text-sm font-medium  leading-5 hover:bg-[#F5F7FA] cursor-pointer py-1">
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
       </SidebarContent>
-      <SidebarFooter>
+      <Separator className="mb-2" />
+      <SidebarFooter className="">
         <NavUser user={data.user} />
       </SidebarFooter>
       <SidebarRail />

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Card } from "./ui/card";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { ChevronRight } from "lucide-react";
 
@@ -90,7 +90,7 @@ const tabs = ["Incoming", "Outgoing", "Pending"];
 
 const RecentTransactions = () => {
   return (
-    <div className="w-full p-4 rounded-xl shadow border h-fit  ">
+    <div className="w-full p-4 rounded-xl shadow border mb-10 lg:mb-20  ">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-row gap-2 items-center">
@@ -106,13 +106,13 @@ const RecentTransactions = () => {
       </div>
 
       {/* Tabs */}
-      <Tabs defaultValue="Incoming" className="w-full">
+      <Tabs defaultValue="Incoming" className="w-full ">
         <TabsList className="grid grid-cols-3 w-full bg-gray-100 rounded-lg">
           {tabs.map((tab) => (
             <TabsTrigger
               key={tab}
               value={tab}
-              className="text-sm font-medium data-[state=active]:bg-white data-[state=active]:shadow-sm"
+              className="text-sm  font-medium data-[state=active]:bg-white data-[state=active]:shadow-sm"
             >
               {tab}
             </TabsTrigger>
@@ -121,7 +121,7 @@ const RecentTransactions = () => {
 
         {/* Tab Content */}
         {tabs.map((tab) => (
-          <TabsContent key={tab} value={tab}>
+          <TabsContent key={tab} value={tab} className="b mt-6 ">
             <div className="mt-4 flex flex-col gap-4">
               {transactions
                 .filter((tx) => tx.tab === tab)
@@ -132,7 +132,7 @@ const RecentTransactions = () => {
                     <Link
                       key={index}
                       href="#"
-                      className="flex items-center justify-between w-full"
+                      className="flex items-center justify-between w-full "
                     >
                       <div className="flex items-center gap-3">
                         {/* Icon Container with Rental Income green */}

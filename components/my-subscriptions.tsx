@@ -34,7 +34,7 @@ const mysubscription = [
 
 const Mysubscription = () => {
   return (
-    <div className="w-full p-4 rounded-2xl shadow-sm h-fit">
+    <div className="w-full p-4 rounded-2xl shadow-sm mb-10 lg:mb-20  ">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-row gap-2 items-center">

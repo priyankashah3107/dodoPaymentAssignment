@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Card } from "./ui/card";
 import {
   Select,
   SelectContent,
@@ -32,7 +31,7 @@ const spendingsummary = [
 
 export default function SpendingSummary() {
   return (
-    <div className="w-full p-4  border shadow rounded-xl ">
+    <div className="w-full p-4  border shadow rounded-xl lg:h-[490px] ">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <div className="flex flex-row gap-2 items-center">
@@ -61,9 +60,9 @@ export default function SpendingSummary() {
         <div className="max-w-sm -mb-52">
           <PieChart
             data={[
-              { title: "Shopping", value: 700, color: "#335CFF" },
-              { title: "Utilities", value: 600, color: "#47C2FF" },
-              { title: "Others", value: 200, color: "#E1E4EA" },
+              { title: "Shopping", value: 600, color: "#335CFF" },
+              { title: "Utilities", value: 500, color: "#47C2FF" },
+              { title: "Others", value: 400, color: "#E1E4EA" },
             ]}
             lineWidth={20}
             startAngle={180}
@@ -96,8 +95,8 @@ export default function SpendingSummary() {
               <Image
                 src={item.icon}
                 alt={item.title}
-                width={24}
-                height={24}
+                width={17}
+                height={17}
                 className="object-contain"
               />
             </div>
@@ -114,7 +113,7 @@ export default function SpendingSummary() {
       </div>
 
       {/* Footer limit */}
-      <div className="mt-6 w-full text-center border rounded-md py-2">
+      <div className="mt-6 w-full px-3 border rounded-md py-2 font-normal ">
         <span className="text-gray-500 text-sm font-medium">
           Your weekly spending limit is{" "}
         </span>
