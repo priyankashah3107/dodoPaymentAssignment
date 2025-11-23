@@ -202,6 +202,7 @@ pnpm start
 - **Vercel**: Optimized for Next.js deployments
 - **Netlify**: Great for static and serverless deployments
 - **AWS/Azure/GCP**: For custom infrastructure needs
+<!--
 
 ## 📄 License
 
@@ -209,4 +210,4 @@ This project is part of an assignment submission.
 
 ## 👤 Author
 
-Built as part of the React Intern Assignment for DodoPayments.
+Built as part of the React Intern Assignment for DodoPayments. -->
